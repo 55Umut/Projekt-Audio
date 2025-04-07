@@ -1,38 +1,124 @@
-# Raspberry Pi Pico W Audio-Modul Projekt
+# 🎧 Umut | Raspberry Pi Pico W Audio-Projekt
 
-In diesem Projekt wird ein PCM5100A Audio-Modul an den Raspberry Pi Pico W angeschlossen, um Soundausgabe mit `.wav` und `.pcm`-Dateien zu ermöglichen. Der Code wurde mit MicroPython in Thonny entwickelt.
+<div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=3000&pause=1000&color=2F81F7&center=true&vCenter=true&width=600&lines=Willkommen+beim+Audio-Projekt;MicroPython+%2B+Raspberry+Pi+Pico+W;Sound+via+I2S;Lernen+durch+Projekte" alt="Typing SVG" />
+</div>
 
-## Projektübersicht
+<div align="center">
+  <a href="https://github.com/55Umut/Projekt-Audio">
+    <img src="https://img.shields.io/badge/🔊%20Projekt-Audio%20mit%20Pico%20W-brightgreen?style=for-the-badge" alt="Projekt Audio" />
+  </a>
+</div>
 
-Nach dem Erlernen der Python-Grundlagen und der Arbeit mit einem Starterset für den Raspberry Pi Pico W, habe ich dieses Projekt entwickelt, um ein Audio-Modul anzuschließen und zu steuern. Ziel war es, Audiodaten über I2S (Inter-IC Sound) zu übertragen und die Wiedergabe von Audio-Dateien auf dem Pico W zu ermöglichen.
+---
 
-## Was du benötigst
+## 📘 Projektübersicht
 
-- Raspberry Pi Pico W
-- PCM5100A Audio-Modul
-- 5 Männlich-Weiblich Jumper-Kabel
-- 2 x 8 Ohm, 2W Lautsprecher
-- MicroPython und Thonny IDE
+In diesem Projekt wird ein **PCM5100A Audio-Modul** an den **Raspberry Pi Pico W** angeschlossen, um Soundausgabe mit `.wav`- und `.pcm`-Dateien zu ermöglichen.  
+Der Code wurde in **MicroPython** mit der **Thonny IDE** geschrieben.
 
-## Anleitung zum Anschließen des Audio-Moduls
+🎯 **Ziel**: Audio über I2S-Schnittstelle abspielen und ein praktisches Embedded-Projekt mit Soundausgabe umsetzen.
 
-### Pinbelegung für das PCM5100A Audio-Modul:
-- **BCK (Pin 15)**: Bit Clock (Takt für die Datenübertragung)
-- **LCK (Pin 16)**: Word Select (Kanalauswahl – links/rechts)
-- **DIN (Pin 17)**: Serial Data (Datenübertragung)
+---
 
-### Schritte zum Setup:
-1. Verbinde das PCM5100A Audio-Modul mit dem Raspberry Pi Pico W gemäß der oben genannten Pinbelegung.
-2. Installiere die erforderlichen MicroPython-Bibliotheken über Thonny:
-   - Öffne Thonny und gehe zu „Tools“ > „Manage packages“.
-   - Suche nach den notwendigen Bibliotheken und installiere sie.
-3. Lade die bereitgestellten Python-Skripte (`wavcode.py` und `pcmcode.py`) hoch, um die Audiodaten abzuspielen.
-4. Komprimiere `.wav`-Dateien, um sie im Pico W mit begrenztem Speicherplatz (max. 2 MB) zu nutzen.
+## 🧰 Was du benötigst
 
-## Nützliche Links
+- 🧠 Raspberry Pi Pico W
+- 🔊 PCM5100A Audio-Modul
+- 🔌 5 Jumper-Kabel (Männlich-Weiblich)
+- 🔈 2 Lautsprecher (8 Ohm, 2W)
+- 💻 Thonny IDE & MicroPython-Firmware
 
-Weitere nützliche Ressourcen und Tools findest du in der mitgelieferten PDF- oder DOCX-Datei.
+---
 
-## Fazit
+## 🛠️ Anleitung zum Anschließen des Audio-Moduls
 
-Dieses Projekt hilft dir, die grundlegenden Prinzipien der Audioübertragung über I2S zu verstehen und den Raspberry Pi Pico W mit einem Audio-Modul zu verbinden. Mit MicroPython und Thonny kannst du einfach mit dem Pico W experimentieren und lernen.
+### 📌 Pinbelegung für das PCM5100A Audio-Modul:
+
+| Modul Pin | Pico W Pin | Funktion          |
+|-----------|------------|-------------------|
+| BCK       | GP15       | Bit Clock         |
+| LCK       | GP16       | Word Select       |
+| DIN       | GP17       | Serial Data       |
+
+---
+
+### 🧪 Setup-Schritte:
+
+1. **Hardware anschließen**: Verbinde das Modul laut obiger Tabelle mit dem Pico W.
+2. **Firmware**: Flash MicroPython auf den Pico W (z. B. via Thonny).
+3. **Thonny öffnen** → „Tools > Manage Packages“ → benötigte Pakete installieren.
+4. **Python-Skripte hochladen**:  
+   - `wavcode.py`  
+   - `pcmcode.py`
+5. **Audiodateien vorbereiten**: `.wav`-Dateien auf max. **2 MB** komprimieren.
+
+---
+
+## 📁 Projektstruktur
+
+```bash
+Projekt-Audio/
+├── wavcode.py            # Audio-Ausgabe mit .wav-Dateien
+├── pcmcode.py            # Audio-Ausgabe mit .pcm-Dateien
+├── AudioTestFiles/       # Beispiel-Dateien
+├── Ressourcen/           # PDF/DOCX-Dokumentation
+└── README.md             # Dieses Dokument
+
+
+## 👨‍💻 Beispielcode
+
+```python
+import wavcode
+
+wavcode.play("sound.wav") 
+
+## 🧠 Lernziele
+
+- ✅ Grundlagen der Audioübertragung über I2S verstehen  
+- ✅ Arbeiten mit Hardwaremodulen und GPIOs  
+- ✅ Sound-Dateien in Embedded-Systemen abspielen  
+- 🟡 GUI oder Weboberfläche für Dateiauswahl entwickeln  
+- 🟡 Audio-Kompression / Encoder-Skripte schreiben  
+
+---
+
+## 📚 Nützliche Ressourcen
+
+- 📂 Siehe den Ordner `Ressourcen/` (PDF & DOCX)  
+- 🌐 [Raspberry Pi Pico W Docs](https://www.raspberrypi.com/documentation/microcontrollers/)  
+- 📹 YouTube Tutorials zum Thema „Pico W Audio“  
+
+---
+
+## 🔮 Zukünftige Erweiterungen
+
+- Lautstärkeregler via Potentiometer  
+- OLED-Display mit Titelanzeige  
+- WLAN Webinterface zur Dateiauswahl  
+
+---
+
+## 🧩 Technologien & Tools
+
+<div align="center">
+  <img src="https://img.shields.io/badge/MicroPython-black?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Raspberry%20Pi%20Pico%20W-green?style=for-the-badge&logo=raspberry-pi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Thonny-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/I2S-Audio-red?style=for-the-badge" />
+</div>
+
+---
+
+## 📫 Kontakt
+
+- GitHub: [@55Umut](https://github.com/55Umut)  
+- LinkedIn: in Arbeit  
+- E-Mail: auf Anfrage  
+
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=55Umut&color=blue" alt="Profile Views" />
+  <br><br>
+  <b>Danke fürs Reinschauen 🎧</b><br>
+  <i>Feedback & Pull Requests sind jederzeit willkommen!</i>
+</div>
