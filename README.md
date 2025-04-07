@@ -23,11 +23,11 @@ Der Code wurde in **MicroPython** mit der **Thonny IDE** geschrieben.
 
 ## 🧰 Was du benötigst
 
-- 🧠 Raspberry Pi Pico W
-- 🔊 PCM5100A Audio-Modul
-- 🔌 5 Jumper-Kabel (Männlich-Weiblich)
-- 🔈 2 Lautsprecher (8 Ohm, 2W)
-- 💻 Thonny IDE & MicroPython-Firmware
+- 🧠 Raspberry Pi Pico W  
+- 🔊 PCM5100A Audio-Modul  
+- 🔌 5 Jumper-Kabel (Männlich-Weiblich)  
+- 🔈 2 Lautsprecher (8 Ohm, 2W)  
+- 💻 Thonny IDE & MicroPython-Firmware  
 
 ---
 
@@ -45,33 +45,15 @@ Der Code wurde in **MicroPython** mit der **Thonny IDE** geschrieben.
 
 ### 🧪 Setup-Schritte:
 
-1. **Hardware anschließen**: Verbinde das Modul laut obiger Tabelle mit dem Pico W.
-2. **Firmware**: Flash MicroPython auf den Pico W (z. B. via Thonny).
-3. **Thonny öffnen** → „Tools > Manage Packages“ → benötigte Pakete installieren.
+1. **Hardware anschließen**: Verbinde das Modul laut obiger Tabelle mit dem Pico W.  
+2. **Firmware**: Flash MicroPython auf den Pico W (z. B. via Thonny).  
+3. **Thonny öffnen** → „Tools > Manage Packages“ → benötigte Pakete installieren.  
 4. **Python-Skripte hochladen**:  
    - `wavcode.py`  
-   - `pcmcode.py`
-5. **Audiodateien vorbereiten**: `.wav`-Dateien auf max. **2 MB** komprimieren.
+   - `pcmcode.py`  
+5. **Audiodateien vorbereiten**: `.wav`-Dateien auf max. **2 MB** komprimieren.  
 
 ---
-
-## 📁 Projektstruktur
-
-```bash
-Projekt-Audio/
-├── wavcode.py            # Audio-Ausgabe mit .wav-Dateien
-├── pcmcode.py            # Audio-Ausgabe mit .pcm-Dateien
-├── AudioTestFiles/       # Beispiel-Dateien
-├── Ressourcen/           # PDF/DOCX-Dokumentation
-└── README.md             # Dieses Dokument
-
-
-## 👨‍💻 Beispielcode
-
-```python
-import wavcode
-
-wavcode.play("sound.wav") 
 
 ## 🧠 Lernziele
 
@@ -122,3 +104,16 @@ wavcode.play("sound.wav")
   <b>Danke fürs Reinschauen 🎧</b><br>
   <i>Feedback & Pull Requests sind jederzeit willkommen!</i>
 </div>
+
+---
+
+## 📁 Projektstruktur
+
+```bash
+Projekt-Audio/
+├── wavcode.py            # Audio-Ausgabe mit .wav-Dateien
+├── pcmcode.py            # Audio-Ausgabe mit .pcm-Dateien
+├── AudioTestFiles/       # Beispiel-Dateien
+├── Ressourcen/           # PDF/DOCX-Dokumentation
+└── README.md             # Dieses Dokument
+
